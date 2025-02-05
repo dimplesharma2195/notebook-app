@@ -27,13 +27,12 @@ function App() {
       note.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const isSearching = searchTerm.trim() !== "";
-
   return (
     <div className="app">
       <header className="app-header">
-        <h1>NoteBook</h1>
+        <h1>Notebook</h1>
       </header>
+
       <div className="search-bar">
         <i className="search-icon">🔍</i>
         <input
@@ -43,33 +42,27 @@ function App() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </div>
-      {isSearching ? (
-        // In search mode, only display the matching notes (or message if none)
-        <Notes
-          filteredNotes={filteredNotes}
-          deleteNote={deleteNote}
-          searchTermActive={true}
-        />
-      ) : (
-        <>
-          <div className="notes-counter">
-            <p>Total Notes: {notes.length}</p>
-            <p>Showing: {notes.length}</p>
-          </div>
-          <Form
-            title={title}
-            setTitle={setTitle}
-            description={description}
-            setDescription={setDescription}
-            addNote={addNote}
-          />
-          <Notes
-            filteredNotes={notes}
-            deleteNote={deleteNote}
-            searchTermActive={false}
-          />
-        </>
-      )}
+
+      <div className="notes-counter">
+        <p>Total Notes: {notes.length}</p>
+        <p>
+          Showing: {searchTerm.trim() ? filteredNotes.length : notes.length}
+        </p>
+      </div>
+
+      <Form
+        title={title}
+        setTitle={setTitle}
+        description={description}
+        setDescription={setDescription}
+        addNote={addNote}
+      />
+
+      <Notes
+        filteredNotes={filteredNotes}
+        deleteNote={deleteNote}
+        isSearching={!!searchTerm.trim()}
+      />
     </div>
   );
 }
