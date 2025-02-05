@@ -1,4 +1,4 @@
-# NoteBook-app
+# NoteBook App
 A simple React-based notebook app that allows users to create, view, search, and delete notes. The application features a responsive design, search functionality, and a clean, user-friendly interface.
 
 # GIF
