@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .app-header {
+    background-color: #6a0dad;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 50%;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.5rem 2.5rem; 
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    color: #999;
+    font-size: 1.2rem;
+  }
+  
+  .notes-counter {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  
+  .notes-counter p {
+    margin: 0.5rem 0;
+  }  
