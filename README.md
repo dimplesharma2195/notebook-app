@@ -2,8 +2,10 @@
 A simple React-based notebook app that allows users to create, view, search, and delete notes. The application features a responsive design, search functionality, and a clean, user-friendly interface.
 
 # GIF
+![Image](https://github.com/user-attachments/assets/4bd9a4bc-5502-4f72-a6a6-2d409d6c2029)
 
 # Demo
+https://github.com/user-attachments/assets/04fdee0f-8c5f-4f4e-aa7f-feffb4b3daef
 
 # Features
 __Add Notes:__ Add a new note with a title and description.  
